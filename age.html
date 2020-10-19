@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học sinh đủ tuổi nhập học lớp 10 không?</title>
+</head>
+
+<body>
+    <script>
+        let Year = promt("Nhập năm sinh:")
+        let Age = 2020 - Number(Year)
+        let Display = "Tuổi của học sinh là :" + " " + Age + " " + "tuổi"
+        if (Age < 16) {
+            document.write(Display)
+            document.write("Học sinh không đủ tuổi nhập học lớp 10")
+        } else {
+            document.write(Display)
+            document.write("Học sinh đủ tuổi nhập học lớp 10")
+        }
+    </script>
+</body>
+
+</html>
