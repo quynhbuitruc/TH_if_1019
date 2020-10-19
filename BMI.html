@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tính chỉ số BMI</title>
 </head>
+
 <body>
     <table>
         <th>
@@ -12,18 +14,18 @@
         </th>
         <tr>
             <td> Chiều cao (m)</td>
-            <td> <input id="height" type="number" value =""> </td>
+            <td> <input id="height" type="number" value=""> </td>
         </tr>
         <tr>
             <td> Cân nặng (kg) </td>
-            <td> <input id="weight" type="number" value =""> </td>
+            <td> <input id="weight" type="number" value=""> </td>
         </tr>
         <tr>
             <td></td>
             <td> <button onclick="Calculate()"> Tính BMI</button></td>
         </tr>
         <tr>
-            <td id = "displayBMi" colspan="2"></td>
+            <td id="displayBMi" colspan="2"></td>
         </tr>
         <tr>
             <td id="alert" colspan="2"></td>
@@ -31,15 +33,16 @@
     </table>
     <script>
         function Calculate() {
-        let Height = Number(document.getElementById("height").value);
-        console.log(Height)
-        let Weight = Number(document.getElementById("weight").value);
-        console.log(Weight)
-        let BMi = Weight / (Height*2)
-        console.log(BMi)
-        document.getElementById("displayBMi").innerText = "Chỉ số BMI của bạn là" + " " + BMi;
-
-    }
+            let Height = Number(document.getElementById("height").value);
+            console.log(Height)
+            let Weight = Number(document.getElementById("weight").value);
+            console.log(Weight)
+            let BMi = Weight / (Height * 2)
+            console.log(BMi)
+            document.getElementById("displayBMi").innerText = "Chỉ số BMI của bạn là" + " " + BMi.toFixed(1);
+            
+        }
     </script>
 </body>
+
 </html>
