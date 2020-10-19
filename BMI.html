@@ -24,13 +24,9 @@
             <td></td>
             <td> <button onclick="Calculate()"> Tính BMI</button></td>
         </tr>
-        <tr>
-            <td id="displayBMi" colspan="2"></td>
-        </tr>
-        <tr>
-            <td id="alert" colspan="2"></td>
-        </tr>
     </table>
+    <p id="displaybmI"></p>
+    <p id="alert"></p>
     <script>
         function Calculate() {
             let Height = Number(document.getElementById("height").value);
@@ -38,9 +34,16 @@
             let Weight = Number(document.getElementById("weight").value);
             console.log(Weight)
             let BMi = Weight / (Height * 2)
-            console.log(BMi)
-            document.getElementById("displayBMi").innerText = "Chỉ số BMI của bạn là" + " " + BMi.toFixed(1);
-            
+            let bmI = BMi.toFixed(1)
+            console.log(bmI)
+            document.getElementById("displaybmI").innerText = "Chỉ số BMI của bạn là" + " " + bmI;
+            if (bmI < 18.5) {
+                document.getElementById("alert").innerText = "Bạn hơi nhẹ cân, nên bồi dưỡng thêm!"
+            } else if (bmI < 25) {
+                document.getElementById("alert").innerText = "Bạn hơi dư cân, nên xem lại chế độ ăn uống và vận động."
+            } else if (bmI <30) {
+                document.getElementById("alert").innerText = "Bạn đã bị béo phì. Cùng nhau ăn uống khoa học và vận động nhiều hơn để cải thiện chất lượng cuộc sống nha!"
+            }
         }
     </script>
 </body>
