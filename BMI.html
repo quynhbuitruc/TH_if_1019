@@ -12,18 +12,34 @@
         </th>
         <tr>
             <td> Chiều cao (m)</td>
-            <td> <input type="number" value =""> </td>
+            <td> <input id="height" type="number" value =""> </td>
         </tr>
         <tr>
             <td> Cân nặng (kg) </td>
-            <td> <input type="number" value =""> </td>
+            <td> <input id="weight" type="number" value =""> </td>
         </tr>
         <tr>
-            <td> <button> Tính BMI</button></td>
-            <td id = "display"></td>
+            <td></td>
+            <td> <button onclick="Calculate()"> Tính BMI</button></td>
+        </tr>
+        <tr>
+            <td id = "displayBMi" colspan="2"></td>
+        </tr>
+        <tr>
+            <td id="alert" colspan="2"></td>
         </tr>
     </table>
     <script>
+        function Calculate() {
+        let Height = Number(document.getElementById("height").value);
+        console.log(Height)
+        let Weight = Number(document.getElementById("weight").value);
+        console.log(Weight)
+        let BMi = Weight / (Height*2)
+        console.log(BMi)
+        document.getElementById("displayBMi").innerText = "Chỉ số BMI của bạn là" + " " + BMi;
+
+    }
     </script>
 </body>
 </html>
