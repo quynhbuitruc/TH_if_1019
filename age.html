@@ -8,16 +8,18 @@
 </head>
 
 <body>
+    <p id="display"></p>
+    <p id="Alert"></p>
     <script>
-        let Year = promt("Nhập năm sinh:")
+        let Year = prompt("Nhập năm sinh:")
         let Age = 2020 - Number(Year)
-        let Display = "Tuổi của học sinh là :" + " " + Age + " " + "tuổi"
+        console.log(Age)
+        let Display = "Số tuổi của học sinh là: " + Age + " " + "tuổi"
+        document.getElementById("display").innerText = Display
         if (Age < 16) {
-            document.write(Display)
-            document.write("Học sinh không đủ tuổi nhập học lớp 10")
+            document.getElementById("Alert").innerText = "Học sinh không đủ tuổi nhập học lớp 10"
         } else {
-            document.write(Display)
-            document.write("Học sinh đủ tuổi nhập học lớp 10")
+            document.getElementById("Alert").innerText = "Học sinh không đủ tuổi nhập học lớp 10"
         }
     </script>
 </body>
